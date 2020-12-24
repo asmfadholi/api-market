@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transaction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "transactions": {
+      "type": "dynamiczone",
+      "components": [
+        "transaction.transaction"
+      ]
+    },
+    "total": {
+      "type": "biginteger"
+    }
+  }
+}

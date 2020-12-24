@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_transaction_transactions",
+  "info": {
+    "name": "transaction",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "productName": {
+      "type": "string"
+    },
+    "count": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "biginteger"
+    }
+  }
+}
