@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "models",
   "info": {
-    "name": "model"
+    "name": "model",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,11 +11,25 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "model": {
-      "type": "json"
-    },
     "name": {
       "type": "string"
+    },
+    "model": {
+      "type": "text"
+    },
+    "net": {
+      "type": "text"
+    },
+    "classifier": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
