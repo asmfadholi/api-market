@@ -28,6 +28,15 @@
     "name": {
       "type": "string",
       "required": true,
+      "unique": false
+    },
+    "unit": {
+      "type": "string"
+    },
+    "uniqueName": {
+      "type": "string",
+      "private": false,
+      "required": true,
       "unique": true
     }
   }
