@@ -38,6 +38,13 @@
       "private": false,
       "required": true,
       "unique": true
+    },
+    "users_permissions_role": {
+      "plugin": "users-permissions",
+      "model": "role"
+    },
+    "stock": {
+      "type": "biginteger"
     }
   }
 }

@@ -1,0 +1,66 @@
+version: "3"
+
+services:
+  api-market:
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - '1337:1337'
+    environment:
+      - NODE_ENV= development
+      - DATABASE_CLIENT= postgres
+      - DATABASE_HOST= postgres
+      - DATABASE_PORT= 5432
+      - DATABASE_NAME= strapi
+      - DATABASE_USERNAME= strapi
+      - DATABASE_PASSWORD= strapi
+      - SENDGRID_API_KEY= SG.strapi.ojGCHLbCs6OZMYHnTP1xSz_M9EE5UhrkLC4ymP6vLzE
+    volumes:
+      - ./app:/srv/app
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:10.15
+    container_name: postgres-market
+    restart: unless-stopped
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_PASSWORD= strapi
+      - POSTGRES_USER= strapi
+      - POSTGRES_DB= strapi
+    volumes:
+     - ./data:/var/lib/postgresql/data
+
+
+# version: '3'
+# services:
+#   strapi:
+#     image: strapi/strapi
+#     environment:
+#       DATABASE_CLIENT: postgres
+#       DATABASE_NAME: strapi
+#       DATABASE_HOST: postgres
+#       DATABASE_PORT: 5432
+#       DATABASE_USERNAME: strapi
+#       DATABASE_PASSWORD: strapi
+#     volumes:
+#       - ./app:/srv/app
+#     ports:
+#       - '1337:1337'
+#     depends_on:
+#       - postgres
+
+#   postgres:
+#     image: postgres
+#     ports:
+#       - '5432:5432'
+#     environment:
+#       POSTGRES_DB: strapi
+#       POSTGRES_USER: strapi
+#       POSTGRES_PASSWORD: strapi
+#     volumes:
+#       - ./data:/var/lib/postgresql/data
