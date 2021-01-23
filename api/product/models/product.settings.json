@@ -37,7 +37,7 @@
       "type": "string",
       "private": false,
       "required": true,
-      "unique": true
+      "unique": false
     },
     "users_permissions_role": {
       "plugin": "users-permissions",
