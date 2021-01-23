@@ -45,6 +45,12 @@
     },
     "stock": {
       "type": "biginteger"
+    },
+    "basePrice": {
+      "type": "biginteger"
+    },
+    "shop": {
+      "model": "shop"
     }
   }
 }
