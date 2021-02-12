@@ -51,6 +51,11 @@
     },
     "shop": {
       "model": "shop"
+    },
+    "grocery": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product.products"
     }
   }
 }

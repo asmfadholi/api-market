@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_products_products",
+  "info": {
+    "name": "grocery",
+    "icon": "air-freshener",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "price": {
+      "type": "biginteger"
+    },
+    "minCount": {
+      "type": "biginteger"
+    }
+  }
+}
