@@ -23,6 +23,9 @@
       "type": "component",
       "repeatable": false,
       "component": "product.products"
+    },
+    "basePrice": {
+      "type": "biginteger"
     }
   }
 }
