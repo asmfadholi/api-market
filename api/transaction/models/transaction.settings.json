@@ -30,7 +30,7 @@
     "shop": {
       "model": "shop"
     },
-    "cretedAt": {
+    "createdAt": {
       "type": "string"
     }
   }
