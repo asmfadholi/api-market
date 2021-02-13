@@ -26,6 +26,9 @@
     },
     "basePrice": {
       "type": "biginteger"
+    },
+    "productId": {
+      "type": "string"
     }
   }
 }
